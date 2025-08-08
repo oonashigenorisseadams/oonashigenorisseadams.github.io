@@ -4,7 +4,7 @@ layout: default
 
 ## About Me
 
-<img class="profile-picture" src="headshot_square.jpg" style="width:220px; height:220px; border-radius:0; object-fit:cover;>
+<img class="profile-picture" src="headshot_square.jpg">
 
 Hi! I am a PhD student in computational biology at Cornell University.
 
