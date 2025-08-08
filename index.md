@@ -15,7 +15,7 @@ layout: default
   <aside class="about-side">
     <img class="profile-picture" src="headshot_square.jpg">
     <ul class="profile-links">
-	<li><a href="https://scholar.google.com/citations?user=xi7fXeQAAAAJ&hl=en" aria-label="Google Scholar">g</a></li>
+	<li><a href="https://scholar.google.com/citations?user=xi7fXeQAAAAJ&hl=en" aria-label="Google Scholar">Google Scholar</a></li>
     	<li><a href="https://github.com/yourhandle" aria-label="GitHub">GitHub</a></li>
     	<li><a href="https://www.linkedin.com/in/oonarisse-adams/" aria-label="LinkedIn">LinkedIn</a></li>
     	<li><a href="https://x.com/oonarisseadams" aria-label="Twitter">Twitter</a></li>

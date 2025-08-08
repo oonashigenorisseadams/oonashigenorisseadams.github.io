@@ -2,45 +2,35 @@
 ---
 @import "style";
 
-/* overrides */
-img.profile-picture {
-  width: 220px;
-  height: 220px;
-  border-radius: 0;   /* <-- square */
-  object-fit: cover;  /* keeps it from distorting */
-  max-width: none;    /* ignore any global img max-width */
-  display: block;
-}
-
-/* layout for the about header */
+/* ===== About header (text left, image + links right) ===== */
 .about-header {
   display: flex;
-  align-items: flex-start;
-  gap: 32px;
+  align-items: center;         /* vertically center image vs text */
+  gap: 40px;                   /* space between text and image column */
 }
 
-/* left column */
 .about-text { flex: 1; }
 
-/* right column (image + links) */
 .about-side {
-  width: 240px;               /* matches 220px image + padding */
+  /* fixed-ish column sized to the image, still responsive */
+  flex: 0 0 clamp(260px, 24vw, 340px);
+  margin-left: auto;           /* push to the right side of container */
   text-align: center;
 }
 
-/* image */
+/* ===== Headshot ===== */
 img.profile-picture {
-  width: 220px;
-  height: 220px;
-  border-radius: 0;           /* 50% for a circle */
+  width: clamp(260px, 24vw, 340px);
+  height: clamp(260px, 24vw, 340px);
+  border-radius: 0;            /* SQUARE */
   object-fit: cover;
   display: block;
-  margin: 0 auto 12px;
-  float: none !important;     /* kill any theme float */
-  max-width: none;
+  margin: 0 auto 12px;         /* center inside right column */
+  float: none !important;      /* override any theme floats */
+  max-width: none;             /* ignore global img max-width */
 }
 
-/* links under the image */
+/* ===== Links under the image ===== */
 .profile-links {
   list-style: none;
   margin: 8px 0 0;
@@ -53,9 +43,14 @@ img.profile-picture {
 .profile-links a { text-decoration: none; }
 .profile-links a:hover { text-decoration: underline; }
 
-/* responsive: stack on mobile */
+/* ===== Mobile: stack with image below text ===== */
 @media (max-width: 700px) {
-  .about-header { flex-direction: column-reverse; align-items: center; }
-  .about-side { width: auto; }
+  .about-header {
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 16px;
+  }
+  .about-side { flex: none; margin-left: 0; }
+  img.profile-picture { width: 200px; height: 200px; }
 }
 
