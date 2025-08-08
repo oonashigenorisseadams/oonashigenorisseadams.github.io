@@ -12,9 +12,9 @@ I’m a computational biologist working at the interface of machine learning, pu
 
 ## Research Interests
 
-* Applied machine learning & causal inference for public health — Building interpretable models on population-scale real-world and genomic data to inform surveillance, risk prediction, and decision-making.
-* Environmental metagenomics & genomic epidemiology — Developing robust pipelines to extract and annotate signals from mixed samples (currently wastewater) and translate them into pathogen and antimicrobial-resistance inference.
-* Human genetics & mechanistic modeling — Integrating statistical genetics with mechanistic/biophysical and sequence-to-structure models (e.g., protein language models) to connect host factors with microbial exposures, including host–microbiome protein–protein interactions.
+* __Applied machine learning & causal inference for public health__ : Building interpretable models on population-scale real-world and genomic data to inform surveillance, risk prediction, and decision-making.
+* __Environmental metagenomics & genomic epidemiology__ : Developing robust pipelines to extract and annotate signals from mixed samples (currently wastewater) and translate them into pathogen and antimicrobial-resistance inference.
+* __Human genetics & mechanistic modeling__ : Integrating statistical genetics with mechanistic/biophysical and sequence-to-structure models (e.g., protein language models) to connect host factors with microbial exposures, including host–microbiome protein–protein interactions.
 
 ## Publications
 
