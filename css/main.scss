@@ -55,17 +55,30 @@ img.profile-picture {
 }
 
 /* === Force big SQUARE headshot on desktop === */
-/* Tweak image size + column */
-.about-side { 
-  flex: 0 0 clamp(300px, 22vw, 340px);
+/* === FINAL: image column + square headshot (slightly smaller) === */
+.about-side {
+  flex: 0 0 clamp(280px, 21vw, 320px);
+  margin-left: auto;
+  text-align: center;
 }
 
 .about-side img.profile-picture {
-  width: clamp(300px, 22vw, 340px) !important;
-  height: clamp(300px, 22vw, 340px) !important;
+  width: clamp(280px, 21vw, 320px) !important;
+  height: clamp(280px, 21vw, 320px) !important;
+  border-radius: 0 !important;     /* force SQUARE */
+  object-fit: cover;
+  display: block;
+  margin: 0 auto 12px;
+  float: none !important;
+  max-width: none !important;
 }
 
-/* Make the link row feel lighter */
-.profile-links { margin-top: 6px; gap: 16px; }
-.profile-links a { font-size: 16px; }
+/* mobile */
+@media (max-width: 700px) {
+  .about-side { flex: none; margin-left: 0; }
+  .about-side img.profile-picture {
+    width: 200px !important;
+    height: 200px !important;
+  }
+}
 
