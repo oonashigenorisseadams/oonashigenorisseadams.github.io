@@ -54,3 +54,31 @@ img.profile-picture {
   img.profile-picture { width: 200px; height: 200px; }
 }
 
+/* === Force big SQUARE headshot on desktop === */
+.about-side { 
+  /* make the right column wide enough for a big image */
+  flex: 0 0 380px;
+  margin-left: auto;
+  text-align: center;
+}
+
+.about-side img.profile-picture {
+  width: 360px !important;
+  height: 360px !important;
+  border-radius: 0 !important;   /* SQUARE */
+  object-fit: cover;
+  display: block;
+  margin: 0 auto 12px;
+  float: none !important;
+  max-width: none !important;
+}
+
+/* === Mobile fallback (smaller square) === */
+@media (max-width: 700px) {
+  .about-side { flex: none; margin-left: 0; }
+  .about-side img.profile-picture {
+    width: 220px !important;
+    height: 220px !important;
+  }
+}
+
