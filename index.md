@@ -6,15 +6,19 @@ layout: default
 
 <img class="profile-picture" src="headshot_square.jpg">
 
-Hi! I am a PhD student in computational biology at Cornell University.
+Hi! 👋 
 
-I’m a computational biologist working at the interface of machine learning, public health, and genomics. Trained in human and statistical genetics, I focus on building interpretable models for population-scale data and am actively extending these methods to environmental metagenomics and genomic epidemiology. I’ve worked in public-health and drug-discovery settings (Genentech, Novo Nordisk) and hold a degree in Statistics from UC Berkeley.
+I'm Oona, a PhD student in computational biology @ Cornell (undergrad in statistics at UC Berkeley).
+
+I work at the interface of machine learning, public health, and genomics. 
+
+I have a background in human and statistical genetics and prior drug-discovery experience at Genentech and Novo Nordisk; I’m currently building interpretable models for population-scale data and extending them to environmental metagenomics and genomic epidemiology (mainly in wastewater)
 
 ## Research Interests
 
-* __Applied machine learning & causal inference for public health__ : Building interpretable models on population-scale real-world and genomic data to inform surveillance, risk prediction, and decision-making.
-* __Environmental metagenomics & genomic epidemiology__ : Developing robust pipelines to extract and annotate signals from mixed samples (currently wastewater) and translate them into pathogen and antimicrobial-resistance inference.
-* __Human genetics & mechanistic modeling__ : Integrating statistical genetics with mechanistic/biophysical and sequence-to-structure models (e.g., protein language models) to connect host factors with microbial exposures, including host–microbiome protein–protein interactions.
+* __Applied machine learning & causal inference for public health__ : models on population-scale real-world and genomic data to inform surveillance, risk prediction, and decision-making
+* __Environmental metagenomics & genomic epidemiology__ : extract and annotate signals from mixed samples and translate them into pathogen and antimicrobial-resistance inference.
+* __Human genetics & mechanistic modeling__ : connect host factors with microbial exposures (including host–microbiome protein–protein interactions).
 
 ## Publications
 
