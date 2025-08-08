@@ -55,30 +55,17 @@ img.profile-picture {
 }
 
 /* === Force big SQUARE headshot on desktop === */
+/* Tweak image size + column */
 .about-side { 
-  /* make the right column wide enough for a big image */
-  flex: 0 0 380px;
-  margin-left: auto;
-  text-align: center;
+  flex: 0 0 clamp(300px, 22vw, 340px);
 }
 
 .about-side img.profile-picture {
-  width: 360px !important;
-  height: 360px !important;
-  border-radius: 0 !important;   /* SQUARE */
-  object-fit: cover;
-  display: block;
-  margin: 0 auto 12px;
-  float: none !important;
-  max-width: none !important;
+  width: clamp(300px, 22vw, 340px) !important;
+  height: clamp(300px, 22vw, 340px) !important;
 }
 
-/* === Mobile fallback (smaller square) === */
-@media (max-width: 700px) {
-  .about-side { flex: none; margin-left: 0; }
-  .about-side img.profile-picture {
-    width: 220px !important;
-    height: 220px !important;
-  }
-}
+/* Make the link row feel lighter */
+.profile-links { margin-top: 6px; gap: 16px; }
+.profile-links a { font-size: 16px; }
 
