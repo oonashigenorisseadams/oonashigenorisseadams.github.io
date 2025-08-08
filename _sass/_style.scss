@@ -130,17 +130,3 @@ hr {
 @import "typography";
 @import "tables";
 
----
----
-@import "style";
-
-/* overrides */
-img.profile-picture {
-  width: 260px;
-  height: 260px;
-  border-radius: 50%;
-  object-fit: cover;
-  max-width: none;   /* in case a global img { max-width:100% } is capping it */
-  display: block;
-}
-

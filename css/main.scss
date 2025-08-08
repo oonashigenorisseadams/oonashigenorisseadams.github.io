@@ -2,16 +2,3 @@
 ---
 @import "style";
 
----
----
-@import "style";
-
-/* overrides: make the headshot bigger */
-img.profile-picture {
-  width: 260px;
-  height: 260px;
-  border-radius: 50%;
-  object-fit: cover;
-  max-width: none;
-  display: block;
-}
