@@ -6,6 +6,15 @@ layout: default
 
 <img class="profile-picture" src="headshot_square.jpg">
 
+<div class="profile-card">
+  <ul class="profile-links">
+    <li><a href="https://scholar.google.com/citations?user=xi7fXeQAAAAJ&hl=en" aria-label="Google Scholar">g</a></li>
+    <li><a href="https://github.com/yourhandle" aria-label="GitHub">GitHub</a></li>
+    <li><a href="https://www.linkedin.com/in/oonarisse-adams/" aria-label="LinkedIn">LinkedIn</a></li>
+    <li><a href="https://x.com/oonarisseadams" aria-label="Twitter">Twitter</a></li>
+  </ul>
+</div>
+
 Hi! 👋 
 
 I'm Oona, a PhD student in computational biology @ Cornell (undergrad in statistics at UC Berkeley).
@@ -13,6 +22,7 @@ I'm Oona, a PhD student in computational biology @ Cornell (undergrad in statist
 I work at the interface of machine learning, public health, and genomics. 
 
 I have a background in human and statistical genetics and prior drug-discovery experience at Genentech and Novo Nordisk; I’m currently building interpretable models for population-scale data and extending them to environmental metagenomics and genomic epidemiology (mainly in wastewater)
+
 
 ## Research Interests
 
