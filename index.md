@@ -2,7 +2,6 @@
 layout: default
 ---
 
-## About Me
 <div class="about-header">
   <div class="about-text">
     <h2>About Me</h2>
@@ -14,7 +13,7 @@ layout: default
   </div>
 
   <aside class="about-side">
-    <img class="profile-picture" src="/assets/headshot_square.jpg" alt="Oona headshot">
+    <img class="profile-picture" src="headshot_square.jpg">
     <ul class="profile-links">
 	<li><a href="https://scholar.google.com/citations?user=xi7fXeQAAAAJ&hl=en" aria-label="Google Scholar">g</a></li>
     	<li><a href="https://github.com/yourhandle" aria-label="GitHub">GitHub</a></li>
