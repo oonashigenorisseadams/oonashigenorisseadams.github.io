@@ -1,15 +1,16 @@
-title: Researcher
-url: "https://ankitsultana.com"
-baseurl: "/researcher"
+title: Oona Shigeno Risse-Adams
+url: "https://oonashigenorisseadams.github.io"
+baseurl: "/"
+description: "Personal blog of Oona Shigeno Risse-Adams"
 
 markdown: kramdown
 #ins_logo: "./bits-logo.png"
 
 tracking_id: #
 
-footer: yes
-footer_url: "https://github.com/ankitsultana"
-footer_text: "Page design by Ankit Sultana"
+#footer: yes
+#footer_url: "https://github.com/oonashigenorisseadams"
+#footer_text: "Page design by Ankit Sultana"
 
 sass:
     style: compressed
