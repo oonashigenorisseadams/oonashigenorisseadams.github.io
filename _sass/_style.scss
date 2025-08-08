@@ -129,3 +129,13 @@ hr {
 
 @import "typography";
 @import "tables";
+
+/* Profile picture sizing */
+img.profile-picture {
+  width: 240px;   /* increase to desired size */
+  height: 240px;
+  border-radius: 50%;
+  object-fit: cover; /* ensures it crops nicely */
+  display: block;
+}
+
