@@ -1,6 +1,6 @@
 title: Oona Shigeno Risse-Adams
 url: "https://oonashigenorisseadams.github.io"
-baseurl: "/"
+baseurl: ""
 description: "Personal blog of Oona Shigeno Risse-Adams"
 
 markdown: kramdown
@@ -17,9 +17,12 @@ sass:
     sass_dir: _sass
 
 nav:
- - name: "About"
-   link: "/researcher/"
- - name: "Resume"
-   link: "resume.pdf"
- - name: "Contact"
-   link: "contact"
+ - name: "Outreach"
+   link: "/outreach"
+ - name: "Misc"
+   link: "/misc"
+
+favicon: true
+favicon_location: "/favicon.ico"
+favicon: true
+favicon_location: "/favicon.ico"

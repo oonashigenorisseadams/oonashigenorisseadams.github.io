@@ -56,26 +56,19 @@
 <body>
     <div class="wrapper">
         <div class="navbar container">
-            {% if site.ins_logo %}
-                <img id="ins-logo" src="{{ site.ins_logo }}" />
-            {% endif %}
-            <a id="author-name" class="alignable pull-left" href="{{ site.url }}{{ site.baseurl }}">{{ site.title }}</a>
-            <ul id="navlist" class="alignable pull-right navbar-ul">
-                {% for x in site.nav %}
-                    {% if x.name == "Resume" %}
-                        <li class="alignable pull-left nav-list"><a target="_blank" href="{{ x.link }}">{{ x.name }}</a>
-                    {% else %}
-                        <li class="alignable pull-left nav-list"><a href="{{ x.link }}">{{ x.name }}</a>
-                    {% endif %}
-                    {% if forloop.last == false %}
-                        /
-                    {% endif %}
-                        </li>
-                {% endfor %}
-            </ul>
+            <div class="header-content">
+                <a id="author-name" class="alignable pull-left" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+                <ul class="alignable pull-right navbar-ul">
+                    <li class="alignable nav-list">
+                        <a href="{{ '/outreach/' | relative_url }}">Outreach</a> /
+                    </li>
+                    <li class="alignable nav-list">
+                        <a href="{{ '/blog/' | relative_url }}">Blog & Misc.</a>
+                    </li>
+                </ul>
+                <hr class="header-line">
+            </div>
         </div>
-        <div style="clear:both"></div>
-        <hr>
         {% if page.is_contact == true %}
             <div class="container content contact">
         {% else %}
@@ -101,5 +94,5 @@
         </script>
     {% endif %}
 </body>
-<footer>
-</footer>
+</html>
+

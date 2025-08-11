@@ -1,0 +1,32 @@
+---
+layout: default
+title: Blog
+---
+
+<h2>Blog</h2>
+
+<ul class="post-list">
+  {% for post in site.posts %}
+    <li>
+      <a class="post-title" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+      <span class="post-date">{{ post.date | date: "%b %d %Y" }}</span>
+    </li>
+  {% endfor %}
+</ul>
+
+<!-- <h2>Misc</h2>
+<div class="misc-content">
+  {% capture misc_content %}
+    {% include misc.md %}
+  {% endcapture %}
+  {{ misc_content | markdownify }}
+</div> -->
+
+<h2>Misc</h2>
+<div class="misc-content">
+  {% capture misc_md %}{% include misc.md %}{% endcapture %}
+  {{ misc_md | markdownify }}
+</div>
+
+
+
