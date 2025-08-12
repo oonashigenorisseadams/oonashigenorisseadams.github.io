@@ -2,15 +2,11 @@ title: Oona Shigeno Risse-Adams
 url: "https://oonashigenorisseadams.github.io"
 baseurl: ""
 description: "Personal blog of Oona Shigeno Risse-Adams"
+permalink: pretty
 
 markdown: kramdown
-#ins_logo: "./bits-logo.png"
 
 tracking_id: #
-
-#footer: yes
-#footer_url: "https://github.com/oonashigenorisseadams"
-#footer_text: "Page design by Ankit Sultana"
 
 sass:
     style: compressed

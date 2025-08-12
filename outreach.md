@@ -1,5 +1,7 @@
 ---
 layout: default
+title: Outreach
+permalink: /outreach/
 ---
 
 ## Current Outreach
