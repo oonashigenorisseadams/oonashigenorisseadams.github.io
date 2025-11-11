@@ -7,9 +7,9 @@ layout: default
     <h2>About Me</h2>
 
     <p>Hi! 👋</p>
-    <p>I’m Oona, a PhD student in computational biology @ Cornell (undergrad in statistics at UC Berkeley).</p>
+    <p>I’m Oona, a PhD student in computational biology @ Weill Cornell (stats undergrad at UC Berkeley).</p>
     <p>I work at the interface of machine learning, public health, and genomics.</p>
-    <p>I have a background in human and statistical genetics and prior drug-discovery experience at Genentech and Novo Nordisk. I’m currently building interpretable models for population-scale data and extending them to environmental metagenomics and genomic epidemiology (mainly in wastewater).</p>
+    <p>I have a background in human and statistical genetics, with prior drug-discovery experience at Genentech and Novo Nordisk. Currently, I'm working on projects in environmental metagenomics and genomic epidemiology in Dr. Chris Mason's group. </p>
 
   </div>
 
@@ -68,24 +68,24 @@ layout: default
 
 ## Research Interests
 
-- **Applied machine learning & causal inference for public health** : models on population-scale real-world and genomic data to inform surveillance, risk prediction, and decision-making.
-- **Environmental metagenomics & genomic epidemiology** : extract and annotate signals from mixed samples and translate them into pathogen and antimicrobial-resistance inference.
-- **Human genetics & mechanistic modeling** : connect host factors with microbial exposures (including host–microbiome protein–protein interactions).
+- **ML and causal inference for public health** : models on real-world and genomic data to inform surveillance, risk prediction, and decision-making.
+- **Genetic epidemiology and metagenomics** : connect host variation, exposures, and community profiles to infection risk and antimicrobial resistance
+- **Spatial & statistical genetics** : variant → gene → cell-state → tissue mapping
 
 ## Publications
-
-1. Boudreau, G.D., Dayal, P., **Risse-Adams, O.S.**, Sun, V., ... et al., 2024. Evaluating Concomitant Medication Use in Cystic Fibrosis Patients Using Real-World Data to Inform Drug–Drug Interaction Risk Assessment and Clinical Trial Design of GDC-6988. American Conference of Pharmacometrics.
-2. Jin, Z., and **Risse-Adams, O.S.**, 2021. Secure Audio Watermarking Based on Neural Networks. U.S. Patent 11,170,793 B2. 
+1. Liquori, J.L.† , **Risse-Adams, O.S.†**, Bharadwaj, R. , ... et al., 2025. Examining the Effect of Social Factors of Health on Human Trait Heritability. bioRxiv. [[PDF]](assets/jll_osra.pdf)
+2. Boudreau, G.D., Dayal, P., **Risse-Adams, O.S.**, Sun, V., ... et al., 2024. Evaluating Concomitant Medication Use in Cystic Fibrosis Patients Using Real-World Data to Inform Drug–Drug Interaction Risk Assessment and Clinical Trial Design of GDC-6988. American Conference of Pharmacometrics.
+3. Jin, Z., and **Risse-Adams, O.S.**, 2021. Secure Audio Watermarking Based on Neural Networks. U.S. Patent 11,170,793 B2. 
 [[PDF]](https://patentimages.storage.googleapis.com/c5/0e/7e/38ab245833ccd5/US11170793.pdf)
-3. Goddard, P.C., Keys, K.L., ... **Risse-Adams, O.**, ... et al., 2021. Integrative Genomic Analysis in African American Children with Asthma Finds Three Novel Loci Associated with Lung Function. Genetic Epidemiology, 45(2), 190–208. 
+4. Goddard, P.C., Keys, K.L., ... **Risse-Adams, O.S.**, ... et al., 2021. Integrative Genomic Analysis in African American Children with Asthma Finds Three Novel Loci Associated with Lung Function. Genetic Epidemiology, 45(2), 190–208. 
 [[PDF]](assets/pg_2021.pdf)
-4. Contreras, M.G., Keys, K., Magana, J., Goddard, P.C., **Risse-Adams, O.**, et al., 2021. Native American Ancestry and Air Pollution Interact to Impact Bronchodilator Response in Puerto Rican Children with Asthma. Ethnicity & Disease, 31(1), 77. 
+5. Contreras, M.G., Keys, K., Magana, J., Goddard, P.C., **Risse-Adams, O.S.**, et al., 2021. Native American Ancestry and Air Pollution Interact to Impact Bronchodilator Response in Puerto Rican Children with Asthma. Ethnicity & Disease, 31(1), 77. 
 [[PDF]](assets/mc_2021.pdf)
-5. Magaña, J., Contreras, M.G., Keys, K.L., **Risse-Adams, O.**, Goddard, P.C., et al., 2020. An Epistatic Interaction Between Pre-natal Smoke Exposure and Socioeconomic Status Has a Significant Impact on Bronchodilator Drug sponse in African American Youth with Asthma. BioData Mining, 13(1), 7. 
+6. Magaña, J., Contreras, M.G., Keys, K.L., **Risse-Adams, O.S.**, Goddard, P.C., et al., 2020. An Epistatic Interaction Between Pre-natal Smoke Exposure and Socioeconomic Status Has a Significant Impact on Bronchodilator Drug sponse in African American Youth with Asthma. BioData Mining, 13(1), 7. 
 [[PDF]](assets/jm_2020.pdf)
-6. White, M.J., Yaspan, B.L., Veatch, O.J., Goddard, P., **Risse-Adams, O.S.**, et al., 2019. Strategies for Pathway Analysis Using GWAS and WGS Data. Current Protocols in Human Genetics, 100(1), e79.
+7. White, M.J., Yaspan, B.L., Veatch, O.J., Goddard, P., **Risse-Adams, O.S.**, et al., 2019. Strategies for Pathway Analysis Using GWAS and WGS Data. Current Protocols in Human Genetics, 100(1), e79.
 [[PDF]](assets/strat_2018.pdf)
-7. Zeiger, A.M., White, M.J., ... **Risse-Adams, O.**, ... et al., 2018. Genetic Determinants of Telomere Length in African American Youth. Scientific Reports, 8(1), 13265.
+8. Zeiger, A.M., White, M.J., ... **Risse-Adams, O.S.**, ... et al., 2018. Genetic Determinants of Telomere Length in African American Youth. Scientific Reports, 8(1), 13265.
 [[PDF]](assets/az_2018.pdf)
-8. White, M.J., **Risse-Adams, O.**, Goddard, P., Contreras, M.G., Adams, J., Hu, D., et al., 2016. Novel Genetic Risk Factors for Asthma in African American Children: Precision Medicine and the SAGE II Study. Immunogenetics, 68(6), 391–400. 
+9. White, M.J.†, **Risse-Adams, O.S.†**, Goddard, P., Contreras, M.G., Adams, J., Hu, D., et al., 2016. Novel Genetic Risk Factors for Asthma in African American Children: Precision Medicine and the SAGE II Study. Immunogenetics, 68(6), 391–400. 
 [[PDF]](assets/osra.pdf)
