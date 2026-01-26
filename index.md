@@ -24,7 +24,7 @@ layout: default
      <ul class="profile-links">
   <!-- Google Scholar -->
   <li>
-    <a href="https://scholar.google.com/citations?user=xi7fXeQAAAAJ&hl=en" aria-label="Google Scholar" title="Google Scholar" target="_blank" rel="noopener">
+    <a href="https://scholar.google.com/citations?user=K1fZLNAAAAAJ&hl=en&authuser=1" aria-label="Google Scholar" title="Google Scholar" target="_blank" rel="noopener">
       <svg viewBox="0 0 24 24" class="icon" role="img" aria-hidden="true">
         <path d="M12 3 1 8l11 5 8-3.6V15h2V8L12 3zm-5 9.5v3c0 1.9 3.1 3 5 3s5-1.1 5-3v-3l-5 2.3-5-2.3z"/>
       </svg>
