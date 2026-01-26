@@ -16,7 +16,7 @@ layout: default
   <aside class="about-side">
     <img class="profile-picture" src="assets/headshot_square.jpg">
     <!-- <ul class="profile-links">
-	<li><a href="https://scholar.google.com/citations?hl=en&user=K1fZLNAAAAAJ" aria-label="Google Scholar">Google Scholar</a></li>
+	<li><a href="https://scholar.google.com/citations?user=K1fZLNAAAAAJ&hl=en&authuser=1" aria-label="Google Scholar">Google Scholar</a></li>
     	<li><a href="https://github.com/oonashigenorisseadams" aria-label="GitHub">GitHub</a></li>
     	<li><a href="https://www.linkedin.com/in/oonarisse-adams/" aria-label="LinkedIn">LinkedIn</a></li>
     	<li><a href="https://x.com/oonarisseadams" aria-label="Twitter">Twitter</a></li>
@@ -73,7 +73,7 @@ layout: default
 - **Spatial & statistical genetics** : variant → gene → cell-state → tissue mapping
 
 ## Publications
-1. Liquori, J.L.† , **Risse-Adams, O.S.†**, Bharadwaj, R. , ... et al., 2025. Examining the Effect of Social Factors of Health on Human Trait Heritability. bioRxiv. [[PDF]](assets/jll_osra.pdf)
+1. Liquori, J.L.† , **Risse-Adams, O.S.†**, Bharadwaj, R. , ... et al., 2025. Social Factors of Health Covary with Population Stratiﬁcation and Confound Heritability Estimates. bioRxiv. [[PDF]](assets/jll_osra_2026.pdf)
 2. Boudreau, G.D., Dayal, P., **Risse-Adams, O.S.**, Sun, V., ... et al., 2024. Evaluating Concomitant Medication Use in Cystic Fibrosis Patients Using Real-World Data to Inform Drug–Drug Interaction Risk Assessment and Clinical Trial Design of GDC-6988. American Conference of Pharmacometrics.
 3. Jin, Z., and **Risse-Adams, O.S.**, 2021. Secure Audio Watermarking Based on Neural Networks. U.S. Patent 11,170,793 B2. 
 [[PDF]](https://patentimages.storage.googleapis.com/c5/0e/7e/38ab245833ccd5/US11170793.pdf)
@@ -88,4 +88,4 @@ layout: default
 8. Zeiger, A.M., White, M.J., ... **Risse-Adams, O.S.**, ... et al., 2018. Genetic Determinants of Telomere Length in African American Youth. Scientific Reports, 8(1), 13265.
 [[PDF]](assets/az_2018.pdf)
 9. White, M.J.†, **Risse-Adams, O.S.†**, Goddard, P., Contreras, M.G., Adams, J., Hu, D., et al., 2016. Novel Genetic Risk Factors for Asthma in African American Children: Precision Medicine and the SAGE II Study. Immunogenetics, 68(6), 391–400. 
-[[PDF]](assets/osra.pdf)
+[[PDF]](assets/osra_2016.pdf)

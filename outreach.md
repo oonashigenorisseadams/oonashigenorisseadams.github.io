@@ -7,7 +7,7 @@ permalink: /outreach/
 ## Current Outreach
 
 #### [Lumiere Education](https://www.lumiere-education.com/) 2025 - present
-I serve as a volunteer mentor for the Lumiere Research Program, supporting students in developing independent research projects and academic skills. 
+I serve as a volunteer mentor for the Lumiere Research Program, supporting students in developing independent research projects and academic skills. Congrats to my mentee for publishing in the [Curieux Review](https://www.curieuxreview.com/)!
 
 #### [Skype a Scientist](https://www.skypeascientist.com/) 2024 - present
 I have been connecting with students across the country to share my passion for computational biology and genomics. I've had the privilege of engaging with AP Environmental Science students at World View High School in New York, discussing genetic epidemiology, academic pathways, and career advice. I've also worked with 5th grade students at Dickinson West Elementary in Michigan, introducing them to general science and STEM topics to foster early interest in scientific careers.
