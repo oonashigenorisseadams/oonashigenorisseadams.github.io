@@ -58,3 +58,27 @@ value
 ### License
 
 [GNU GPL v3](https://github.com/bk2dcradle/researcher/blob/gh-pages/LICENSE)
+
+### Auto-update Publications From Google Scholar
+
+This repo includes a script to refresh the `## Publications` section in `index.md` from a Google Scholar profile while preserving your existing markdown style.
+
+1. Edit `scripts/scholar_sync_config.json` as needed:
+   - `scholar_user_id`: Google Scholar user id
+   - `target_author_last_name`: highlighted in bold in author lists
+   - `assets_dir`: local assets folder (default `assets`)
+   - `min_year`: only add new entries from this year onward, without rewriting older entries
+   - `pdf_overrides`: optional collision map of title -> PDF path/link
+2. Run:
+
+```bash
+python3 scripts/update_publications.py
+```
+
+The script updates only the `## Publications` section in `index.md`.  
+With `min_year` set, it preserves existing entries and prepends only new items from that year onward.
+
+PDF link behavior for new items:
+- If `assets/{first_author_last_name}_{year}.pdf` exists (example: `assets/behera_2026.pdf`), it adds `[[PDF]](...)`.
+- Otherwise it adds `[[Scholar]](...)`.
+- Use `pdf_overrides` only when you need to disambiguate collisions.
