@@ -73,7 +73,7 @@ layout: default
 - **Spatial & statistical genetics** : variant → gene → cell-state → tissue mapping
 
 ## Publications
-1. **Risse-Adams, O.S.**, Collier, P., Nelson, T.M., Foox, J., 2026. Whole-genome benchmarking reveals context-specific error rates in the Ultima UG100 and Illumina NovaSeqX Platforms. bioRxiv.
+1. **Risse-Adams, O.S.**, Collier, P., Nelson, T.M., Foox, J., 2026. Whole-genome benchmarking reveals context-specific error rates in the Ultima UG100 and Illumina NovaSeqX Platforms. bioRxiv. [[PDF]](assets/osra_2026.pdf)
 2. Behera, S., Rossi, M., Wang, Y., Izydorczyk, M.B., Tran, D., Dalgard, C.L., ..., 2026. Scalable and comprehensive mosaic variant calling using DRAGEN. medRxiv. [[PDF]](assets/behera_2026.pdf)
 3. Zhu, K., Amirali, A., Auch, B., Babler, K.M., Biswas, P., Bowie, K., Choudhary, S., ..., 2025. Proof-of-concept of host attribution of antimicrobial resistance genes using wastewater Hi-C metagenome sequencing. Journal of Water and Health. [[PDF]](assets/kongyang_2026.pdf)
 4. Liquori, J.L.† , **Risse-Adams, O.S.†**, Bharadwaj, R. , ... et al., 2025. Social Factors of Health Covary with Population Stratiﬁcation and Confound Heritability Estimates. bioRxiv. [[PDF]](assets/jll_osra_2026.pdf)
