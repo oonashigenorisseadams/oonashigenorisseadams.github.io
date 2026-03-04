@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 """Update the Publications section in index.md from Google Scholar profile data.
 
+Falls back to Semantic Scholar API when Google Scholar is unreachable (e.g. in
+GitHub Actions where datacenter IPs are blocked).
+
 Usage:
   python3 scripts/update_publications.py
   python3 scripts/update_publications.py --config scripts/scholar_sync_config.json
@@ -13,6 +16,7 @@ import html
 import json
 import re
 import sys
+import time
 import unicodedata
 import urllib.parse
 import urllib.request
@@ -170,6 +174,67 @@ def fetch_publications(user_id: str, hl: str = "en", page_size: int = 100) -> Li
     return publications
 
 
+def fetch_publications_semantic_scholar(author_ids: List[str]) -> List[Publication]:
+    """Fetch publications from the Semantic Scholar API for the given author IDs."""
+    seen_paper_ids: set = set()
+    publications: List[Publication] = []
+    fields = "title,year,venue,authors,externalIds,url"
+
+    for author_id in author_ids:
+        api_url = (
+            f"https://api.semanticscholar.org/graph/v1/author/{author_id}/papers"
+            f"?fields={fields}&limit=100"
+        )
+        req = urllib.request.Request(api_url, headers={"User-Agent": "scholar-sync/1.0"})
+        with urllib.request.urlopen(req, timeout=30) as response:
+            data = json.loads(response.read().decode("utf-8"))
+
+        for item in data.get("data", []):
+            paper_id = item.get("paperId", "")
+            if not paper_id or paper_id in seen_paper_ids:
+                continue
+            seen_paper_ids.add(paper_id)
+
+            title = item.get("title", "")
+            if not title:
+                continue
+
+            year = str(item.get("year", "")) if item.get("year") else ""
+            venue = item.get("venue", "") or ""
+
+            author_names = []
+            for author in item.get("authors", []):
+                name = author.get("name", "")
+                if name:
+                    author_names.append(name)
+            authors = ", ".join(author_names)
+
+            external_ids = item.get("externalIds") or {}
+            doi = external_ids.get("DOI", "")
+            if doi:
+                citation_path = f"https://doi.org/{doi}"
+            else:
+                citation_path = item.get("url", "")
+
+            publications.append(
+                Publication(
+                    title=title,
+                    authors=authors,
+                    venue=venue,
+                    year=year,
+                    citation_path=citation_path,
+                )
+            )
+
+        # Respect rate limits between author ID requests.
+        if len(author_ids) > 1:
+            time.sleep(1)
+
+    # Sort by year descending (newest first), matching Google Scholar's sortby=pubdate.
+    publications.sort(key=lambda p: int(p.year) if p.year.isdigit() else 0, reverse=True)
+    return publications
+
+
 def _normalize_key(value: str) -> str:
     value = html.unescape(value).strip().lower()
     value = value.replace("ﬁ", "fi").replace("ﬂ", "fl")
@@ -177,15 +242,54 @@ def _normalize_key(value: str) -> str:
     return value
 
 
-def _format_authors(authors: str, target_last_name: Optional[str]) -> str:
+def _to_initial(token: str) -> str:
+    """Convert a name token to initial form: 'Paul' -> 'P.', 'OS' -> 'O.S.'."""
+    token = token.rstrip(".")
+    if not token:
+        return ""
+    # Concatenated uppercase initials (e.g. "OS", "KM", "CL")
+    if token.isupper() and len(token) <= 4:
+        return ".".join(token) + "."
+    # Already a single initial
+    if len(token) == 1:
+        return token.upper() + "."
+    # Full name — take first letter
+    return token[0].upper() + "."
+
+
+def _reformat_author_name(name: str, overrides: Optional[Dict[str, str]] = None) -> str:
+    """Convert 'First Last' to 'Last, F.' format. Names already in 'Last, First' are unchanged."""
+    name = name.strip()
+    if not name or name in ("...", "\u2026"):
+        return "..."
+    # Check explicit overrides first (e.g. fix bad Scholar metadata).
+    if overrides and name in overrides:
+        return overrides[name]
+    # Already in "Last, First" format
+    if "," in name:
+        return name
+    tokens = name.split()
+    if len(tokens) < 2:
+        return name
+    last_name = tokens[-1]
+    initials = "".join(_to_initial(t) for t in tokens[:-1])
+    return f"{last_name}, {initials}"
+
+
+def _format_authors(
+    authors: str,
+    target_last_name: Optional[str],
+    author_name_overrides: Optional[Dict[str, str]] = None,
+) -> str:
     if not authors:
         return ""
 
     parts = [p.strip() for p in authors.split(",")]
-    if not target_last_name:
-        return ", ".join(parts)
+    # Reformat "First Last" -> "Last, Initials." for auto-fetched names.
+    # Names already in "Last, First" format pass through unchanged.
+    parts = [_reformat_author_name(p, author_name_overrides) for p in parts if p.strip()]
 
-    needle = target_last_name.lower().strip()
+    needle = (target_last_name or "").lower().strip()
     highlighted = []
     for part in parts:
         if needle and needle in part.lower():
@@ -270,6 +374,11 @@ def _link_for_publication(
     if not include_scholar_fallback:
         return ""
 
+    # Full URLs (e.g. from Semantic Scholar / DOI) are used directly;
+    # relative paths are joined with the Google Scholar base.
+    if pub.citation_path.startswith("http"):
+        return f"[[Link]]({pub.citation_path})"
+
     scholar_url = urllib.parse.urljoin("https://scholar.google.com", pub.citation_path)
     return f"[[Scholar]]({scholar_url})"
 
@@ -280,12 +389,13 @@ def _build_markdown_list(
     pdf_overrides: Dict[str, str],
     assets_dir: Path,
     include_scholar_fallback: bool,
+    author_name_overrides: Optional[Dict[str, str]] = None,
 ) -> List[str]:
     override_map = {_normalize_key(k): v for k, v in pdf_overrides.items()}
 
     lines = ["## Publications"]
     for i, pub in enumerate(publications, start=1):
-        text = _publication_entry_text(pub, target_last_name)
+        text = _publication_entry_text(pub, target_last_name, author_name_overrides)
         venue = _normalize_venue(pub.venue)
         if venue and not text.endswith(_ensure_sentence(venue)):
             text += f" {_ensure_sentence(venue)}"
@@ -297,8 +407,12 @@ def _build_markdown_list(
     return lines
 
 
-def _publication_entry_text(pub: Publication, target_last_name: Optional[str]) -> str:
-    authors = _format_authors(pub.authors, target_last_name)
+def _publication_entry_text(
+    pub: Publication,
+    target_last_name: Optional[str],
+    author_name_overrides: Optional[Dict[str, str]] = None,
+) -> str:
+    authors = _format_authors(pub.authors, target_last_name, author_name_overrides)
     year_part = f", {pub.year}" if pub.year else ""
 
     text = ""
@@ -404,6 +518,7 @@ def _build_incremental_section(
     min_year: int,
     assets_dir: Path,
     include_scholar_fallback: bool,
+    author_name_overrides: Optional[Dict[str, str]] = None,
 ) -> List[str]:
     if existing_section_lines:
         heading = existing_section_lines[0]
@@ -424,7 +539,7 @@ def _build_incremental_section(
         if _normalize_key(pub.title) in existing_text_index:
             continue
 
-        text = _publication_entry_text(pub, target_last_name)
+        text = _publication_entry_text(pub, target_last_name, author_name_overrides)
 
         link = _link_for_publication(pub, override_map, assets_dir, include_scholar_fallback)
         suffix = f" {link}" if link else ""
@@ -482,6 +597,7 @@ def main() -> int:
     min_year = int(config.get("min_year", 0))
     assets_dir = Path(config.get("assets_dir", "assets"))
     include_scholar_fallback = bool(config.get("include_scholar_fallback", False))
+    author_name_overrides = config.get("author_name_overrides", {}) or {}
 
     if args.debug_html:
         query = urllib.parse.urlencode(
@@ -513,19 +629,28 @@ def main() -> int:
         except Exception as exc:
             print(f"Could not save debug HTML: {exc}", file=sys.stderr)
 
+    s2_author_ids = config.get("semantic_scholar_author_ids", [])
+    source = "Google Scholar"
+
     try:
         publications = fetch_publications(user_id=user_id, hl=hl)
-    except urllib.error.URLError as exc:
-        print(f"Unable to reach Google Scholar: {exc}", file=sys.stderr)
-        return 1
-    except RuntimeError as exc:
+    except (urllib.error.URLError, RuntimeError) as exc:
         print(f"Google Scholar fetch failed: {exc}", file=sys.stderr)
-        return 1
+        if s2_author_ids:
+            print("Falling back to Semantic Scholar API...", file=sys.stderr)
+            try:
+                publications = fetch_publications_semantic_scholar(s2_author_ids)
+                source = "Semantic Scholar"
+            except Exception as s2_exc:
+                print(f"Semantic Scholar fallback also failed: {s2_exc}", file=sys.stderr)
+                return 1
+        else:
+            return 1
 
     if not publications:
         print(
-            "No publications found from Google Scholar. "
-            "Check scholar_user_id in config and confirm profile is public.",
+            f"No publications found from {source}. "
+            "Check config IDs and confirm profile is public.",
             file=sys.stderr,
         )
         return 1
@@ -541,6 +666,7 @@ def main() -> int:
             min_year=min_year,
             assets_dir=assets_dir,
             include_scholar_fallback=include_scholar_fallback,
+            author_name_overrides=author_name_overrides,
         )
     else:
         new_section_lines = _build_markdown_list(
@@ -549,12 +675,13 @@ def main() -> int:
             pdf_overrides,
             assets_dir,
             include_scholar_fallback,
+            author_name_overrides=author_name_overrides,
         )
     new_section_lines = _renumber_publication_list(new_section_lines)
     updated = replace_section(markdown, section_heading, new_section_lines)
     index_file.write_text(updated, encoding="utf-8")
 
-    print(f"Updated {section_heading} in {index_file} with {len(publications)} items.")
+    print(f"Updated {section_heading} in {index_file} with {len(publications)} items (source: {source}).")
     return 0
 
 

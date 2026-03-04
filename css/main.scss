@@ -99,6 +99,27 @@ h1 {
   }
 }
 
+/* ===== Publication list ===== */
+/* Right-align numbers and add breathing room after the list */
+#publications ~ ol {
+  list-style: none;          /* hide default markers */
+  counter-reset: pub;
+  padding-left: 3.5em;      /* room for the counter */
+  margin-bottom: 8em;       /* whitespace after last item */
+}
+#publications ~ ol > li {
+  counter-increment: pub;
+  position: relative;
+  margin-bottom: 0.35em;
+}
+#publications ~ ol > li::before {
+  content: "[" counter(pub) "]";
+  position: absolute;
+  left: -3.5em;              /* match padding-left */
+  width: 3em;                /* fixed width for the number */
+  text-align: right;
+}
+
 /* ===== PDF Links ===== */
 .publications a[href$=".pdf"] {
   color: #1f3a8a;

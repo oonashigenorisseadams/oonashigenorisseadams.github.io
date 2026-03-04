@@ -5,7 +5,11 @@
   "index_file": "index.md",
   "section_heading": "## Publications",
   "assets_dir": "assets",
-  "min_year": 2026,
+  "min_year": 2025,
+  "semantic_scholar_author_ids": ["1400905061", "2410169307"],
   "include_scholar_fallback": false,
+  "author_name_overrides": {
+    "CEM Oona Shigeno Risse-Adams": "Risse-Adams, O.S."
+  },
   "pdf_overrides": {}
 }
