@@ -5,11 +5,11 @@ layout: default
 <div class="about-header">
   <div class="about-text">
     <h2>About Me</h2>
-
+    
     <p>Hi! 👋</p>
-    <p>I’m Oona, a PhD student in computational biology @ Weill Cornell (stats undergrad at UC Berkeley).</p>
-    <p>I work at the interface of machine learning, public health, and genomics.</p>
-    <p>I have a background in human and statistical genetics, with prior drug-discovery experience at Genentech and Novo Nordisk. Currently, I'm working on projects in environmental metagenomics and genetic epidemiology in Dr. Chris Mason's group. </p>
+    <p>I'm Oona, a PhD student and F31 fellow in computational biology at Weill Cornell. I did my undergrad in Statistics at UC Berkeley.</p>
+    <p>I work at the interface of machine learning, public health, and genomics — with a background in human and statistical genetics, and prior drug-discovery experience at Genentech and Novo Nordisk.</p>
+    <p>Right now, I'm working on projects in environmental metagenomics and genetic epidemiology in Dr. Chris Mason's group.</p>
 
   </div>
 
@@ -71,25 +71,77 @@ layout: default
 - **ML and causal inference for public health** : models on real-world and genomic data to inform surveillance, risk prediction, and decision-making.
 - **Genetic epidemiology and metagenomics** : connect host variation, exposures, and community profiles to infection risk and antimicrobial resistance
 
+## News {#news-heading}
+
+<ul class="news-list">
+  <li>
+    <span class="news-date">June 2026</span>
+    <span class="news-desc">Went to <a href="https://compbioasia.net/">CompBioAsia</a>! </span>
+  </li>
+  <li>
+    <span class="news-date">May 2026</span>
+    <span class="news-desc">Awarded an NIH NIAID F31 fellowship [2026-2029]!!!<br>
+    Big ty to all my mentors ❤️</span>
+  </li>
+  <li>
+    <span class="news-date">April 2026</span>
+    <span class="news-desc">Co-author on a new <a href="assets/circadian.pdf">preprint</a> on cannabis use and sleep/circadian genetics.</span>
+  </li>
+  <li>
+    <span class="news-date">March 2026</span>
+    <span class="news-desc">Posted a preprint on <a href="assets/osra_2026.pdf">benchmarking error rates</a> in the Ultima UG100 and Illumina NovaSeqX platforms.</span>
+  </li>
+</ul>
+
+<details class="news-more">
+  <summary>More</summary>
+  <ul class="news-list">
+    <li>
+      <span class="news-date">Feb 2026</span>
+      <span class="news-desc">Co-author on a new <a href="assets/behera_2026.pdf">preprint</a> on scalable mosaic variant calling using DRAGEN.</span>
+    </li>
+    <li>
+      <span class="news-date">Jan 2026</span>
+      <span class="news-desc">Official start in the Mason lab!</span>
+    </li>
+    <li>
+      <span class="news-date">Dec 2025</span>
+      <span class="news-desc">Co-author on a new <a href="assets/kongyang_2026.pdf">paper</a> on wastewater Hi-C metagenome sequencing for antimicrobial resistance.</span>
+    </li>
+    <li>
+      <span class="news-date">Oct 2025</span>
+      <span class="news-desc">Gave a platform talk at the NYS Wastewater Surveillance Summit.</span>
+    </li>
+    <li>
+      <span class="news-date">July 2025</span>
+      <span class="news-desc">Selected for the PANGAIA PhD School on Modern Bioinformatics towards Pangenomics, Ischia, Italy.</span>
+    </li>
+    <li>
+      <span class="news-date">June 2025</span>
+      <span class="news-desc">Posted a preprint (co-first author) on <a href="assets/jll_osra_2026.pdf">social factors of health and population stratification</a>.</span>
+    </li>
+    <li>
+      <span class="news-date">Nov 2024</span>
+      <span class="news-desc">Presented at ASHG.</span>
+    </li>
+    <li>
+      <span class="news-date">Aug 2024</span>
+      <span class="news-desc">Started my PhD at Cornell University; selected for the Dean's Excellence Fellowship [2024-2025].</span>
+    </li>
+  </ul>
+</details>
+
 ## Publications
-1. Valliere, J., Strausz, S.,  Tchio, C., **Risse-Adams, O.S.**, Sinnott-Armstrong, N., Ollila, H.M., Saxena, H. Meta-analysis of Cannabis Use Identifies Shared Genetic Loci with Sleep
-and Circadian Rhythms. medRxiv. [[PDF]](assets/circadian.pdf)
-2. **Risse-Adams, O.S.**, Collier, P., Nelson, T.M., Foox, J., 2026. Whole-genome benchmarking reveals context-specific error rates in the Ultima UG100 and Illumina NovaSeqX Platforms. bioRxiv. [[PDF]](assets/osra_2026.pdf)
-3. Behera, S., Rossi, M., Wang, Y., Izydorczyk, M.B., Tran, D., Dalgard, C.L., et al. 2026. Scalable and comprehensive mosaic variant calling using DRAGEN. medRxiv. [[PDF]](assets/behera_2026.pdf)
-4. Zhu, K., Amirali, A., Auch, B., Babler, K.M., Biswas, P., Bowie, K., Choudhary, S., et al. 2025. Proof-of-concept of host attribution of antimicrobial resistance genes using wastewater Hi-C metagenome sequencing. Journal of Water and Health. [[PDF]](assets/kongyang_2026.pdf)
-5. Liquori, J.L.† , **Risse-Adams, O.S.†**, Bharadwaj, R., Sinnott-Armstrong, N., Musharoff, S.A. 2025. Social Factors of Health Covary with Population Stratiﬁcation and Confound Heritability Estimates. bioRxiv. [[PDF]](assets/jll_osra_2026.pdf)
-6. Boudreau, G.D., Dayal, P., **Risse-Adams, O.S.**, Sun, V., ... et al., 2024. Evaluating Concomitant Medication Use in Cystic Fibrosis Patients Using Real-World Data to Inform Drug–Drug Interaction Risk Assessment and Clinical Trial Design of GDC-6988. American Conference of Pharmacometrics. 
-7. Jin, Z., and **Risse-Adams, O.S.**, 2021. Secure Audio Watermarking Based on Neural Networks. U.S. Patent 11,170,793 B2. 
-[[PDF]](https://patentimages.storage.googleapis.com/c5/0e/7e/38ab245833ccd5/US11170793.pdf)
-8. Goddard, P.C., Keys, K.L., ... **Risse-Adams, O.S.**, ... et al. 2021. Integrative Genomic Analysis in African American Children with Asthma Finds Three Novel Loci Associated with Lung Function. Genetic Epidemiology, 45(2), 190–208. 
-[[PDF]](assets/pg_2021.pdf)
-9. Contreras, M.G., Keys, K., Magana, J., Goddard, P.C., **Risse-Adams, O.S.**, et al. 2021. Native American Ancestry and Air Pollution Interact to Impact Bronchodilator Response in Puerto Rican Children with Asthma. Ethnicity & Disease, 31(1), 77. 
-[[PDF]](assets/mc_2021.pdf)
-10. Magaña, J., Contreras, M.G., Keys, K.L., **Risse-Adams, O.S.**, Goddard, P.C., et al. 2020. An Epistatic Interaction Between Pre-natal Smoke Exposure and Socioeconomic Status Has a Significant Impact on Bronchodilator Drug sponse in African American Youth with Asthma. BioData Mining, 13(1), 7. 
-[[PDF]](assets/jm_2020.pdf)
-11. White, M.J., Yaspan, B.L., Veatch, O.J., Goddard, P., **Risse-Adams, O.S.**, et al. 2019. Strategies for Pathway Analysis Using GWAS and WGS Data. Current Protocols in Human Genetics, 100(1), e79.
-[[PDF]](assets/strat_2018.pdf)
-12. Zeiger, A.M., White, M.J., ... **Risse-Adams, O.S.**, ... et al. 2018. Genetic Determinants of Telomere Length in African American Youth. Scientific Reports, 8(1), 13265.
-[[PDF]](assets/az_2018.pdf)
-13. White, M.J.†, **Risse-Adams, O.S.†**, Goddard, P., Contreras, M.G., Adams, J., Hu, D., et al. 2016. Novel Genetic Risk Factors for Asthma in African American Children: Precision Medicine and the SAGE II Study. Immunogenetics, 68(6), 391–400. 
-[[PDF]](assets/osra_2016.pdf)
+1. Valliere, J., Strausz, S., Tchio, C., **Risse-Adams, O.S.**, Sinnott-Armstrong, N., Ollila, H.M., Saxena, H. Meta-analysis of Cannabis Use Identifies Shared Genetic Loci with Sleep and Circadian Rhythms. medRxiv. <span class="pub-links">[📄](assets/circadian.pdf) [🔗](https://pubmed.ncbi.nlm.nih.gov/42064962/)</span>
+2. **Risse-Adams, O.S.**, Collier, P., Nelson, T.M., Foox, J., 2026. Whole-genome benchmarking reveals context-specific error rates in the Ultima UG100 and Illumina NovaSeqX Platforms. bioRxiv. <span class="pub-links">[📄](assets/osra_2026.pdf) [🔗](https://www.biorxiv.org/content/10.64898/2026.02.27.708547v1)</span>
+3. Behera, S., Rossi, M., Wang, Y., Izydorczyk, M.B., Tran, D., Dalgard, C.L., et al. 2026. Scalable and comprehensive mosaic variant calling using DRAGEN. medRxiv. <span class="pub-links">[📄](assets/behera_2026.pdf) [🔗](https://www.medrxiv.org/content/10.64898/2026.02.03.26345450v1.full)</span>
+4. Zhu, K., Amirali, A., Auch, B., Babler, K.M., Biswas, P., Bowie, K., Choudhary, S., et al. 2025. Proof-of-concept of host attribution of antimicrobial resistance genes using wastewater Hi-C metagenome sequencing. Journal of Water and Health. <span class="pub-links">[📄](assets/kongyang_2026.pdf) [🔗](https://iwaponline.com/jwh/article/24/2/148/110812/Proof-of-concept-of-host-attribution-of)</span>
+5. Liquori, J.L.† , **Risse-Adams, O.S.†**, Bharadwaj, R., Sinnott-Armstrong, N., Musharoff, S.A. 2025. Social Factors of Health Covary with Population Stratification and Confound Heritability Estimates. bioRxiv. <span class="pub-links">[📄](assets/jll_osra_2026.pdf) [🔗](https://www.biorxiv.org/content/10.1101/2025.06.12.659317v3)</span>
+6. Boudreau, G.D., Dayal, P., **Risse-Adams, O.S.**, Sun, V., ... et al., 2024. Evaluating Concomitant Medication Use in Cystic Fibrosis Patients Using Real-World Data to Inform Drug–Drug Interaction Risk Assessment and Clinical Trial Design of GDC-6988. American Conference of Pharmacometrics.
+7. Jin, Z., and **Risse-Adams, O.S.**, 2021. Secure Audio Watermarking Based on Neural Networks. U.S. Patent 11,170,793 B2. <span class="pub-links">[🔗](https://patentimages.storage.googleapis.com/c5/0e/7e/38ab245833ccd5/US11170793.pdf)</span>
+8. Goddard, P.C., Keys, K.L., ... **Risse-Adams, O.S.**, ... et al. 2021. Integrative Genomic Analysis in African American Children with Asthma Finds Three Novel Loci Associated with Lung Function. Genetic Epidemiology, 45(2), 190–208. <span class="pub-links">[📄](assets/pg_2021.pdf) [🔗](https://pubmed.ncbi.nlm.nih.gov/32989782/)</span>
+9. Contreras, M.G., Keys, K., Magana, J., Goddard, P.C., **Risse-Adams, O.S.**, et al. 2021. Native American Ancestry and Air Pollution Interact to Impact Bronchodilator Response in Puerto Rican Children with Asthma. Ethnicity & Disease, 31(1), 77. <span class="pub-links">[📄](assets/mc_2021.pdf) [🔗](https://pmc.ncbi.nlm.nih.gov/articles/PMC7843041/)</span>
+10. Magaña, J., Contreras, M.G., Keys, K.L., **Risse-Adams, O.S.**, Goddard, P.C., et al. 2020. An Epistatic Interaction Between Pre-natal Smoke Exposure and Socioeconomic Status Has a Significant Impact on Bronchodilator Drug Response in African American Youth with Asthma. BioData Mining, 13(1), 7. <span class="pub-links">[📄](assets/jm_2020.pdf) [🔗](https://pubmed.ncbi.nlm.nih.gov/32636926/)</span>
+11. White, M.J., Yaspan, B.L., Veatch, O.J., Goddard, P., **Risse-Adams, O.S.**, et al. 2019. Strategies for Pathway Analysis Using GWAS and WGS Data. Current Protocols in Human Genetics, 100(1), e79. <span class="pub-links">[📄](assets/strat_2018.pdf) [🔗](https://pubmed.ncbi.nlm.nih.gov/30387919/)</span>
+12. Zeiger, A.M., White, M.J., ... **Risse-Adams, O.S.**, ... et al. 2018. Genetic Determinants of Telomere Length in African American Youth. Scientific Reports, 8(1), 13265. <span class="pub-links">[📄](assets/az_2018.pdf) [🔗](https://pubmed.ncbi.nlm.nih.gov/30185882/)</span>
+13. White, M.J.†, **Risse-Adams, O.S.†**, Goddard, P., Contreras, M.G., Adams, J., Hu, D., et al. 2016. Novel Genetic Risk Factors for Asthma in African American Children: Precision Medicine and the SAGE II Study. Immunogenetics, 68(6), 391–400. <span class="pub-links">[📄](assets/osra_2016.pdf) [🔗](https://pubmed.ncbi.nlm.nih.gov/27142222/)</span>

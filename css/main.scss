@@ -254,3 +254,70 @@ h1 {
   padding-left: 0;
 }
 
+/* ===== News list ===== */
+#news-heading {
+  margin-top: 3rem;
+}
+.news-list {
+  list-style: none;
+  margin: 0.5rem 0 2rem;
+  padding: 0;
+}
+.news-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  padding: 0.15rem 0;
+}
+.news-date {
+  flex: 0 0 110px;
+  font-weight: 700;
+  color: inherit;
+  white-space: nowrap;
+}
+.news-desc {
+  flex: 1;
+  color: #333;
+}
+.news-desc strong {
+  color: #1f3a8a;
+}
+
+.news-more summary {
+  cursor: pointer;
+  color: #1f3a8a;
+  font-weight: 700;
+  margin: 0.1rem 0;   /* was 0.5rem 0 — lower the first value */
+  padding-left: 20px; 
+  list-style: none;   /* removes default triangle marker in some browsers */
+}
+.news-more summary::-webkit-details-marker {
+  display: none;      /* Chrome/Safari: hides default triangle */
+}
+.news-more summary::before {
+  content: "▸ ";       /* custom marker, rotates when open via CSS below */
+  display: inline-block;
+  margin-right: 0.4em;   
+  transition: transform 0.15s;
+}
+.news-more[open] summary::before {
+  transform: rotate(90deg);
+}
+
+.news-more {
+  margin-top: -0.5rem;   /* adjust value to taste */
+}
+
+/* ===== Publication links (replaces old red/blue PDF rule) ===== */
+.pub-links {
+  margin-left: 6px;
+  white-space: nowrap;
+}
+.pub-links a {
+  text-decoration: none;
+  opacity: 0.55;
+  font-size: 0.95em;
+}
+.pub-links a:hover {
+  opacity: 1;
+}
